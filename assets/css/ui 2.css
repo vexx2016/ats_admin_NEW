@@ -921,10 +921,6 @@ h1, h2, h3, h4, h5, h6 {
     .base-tab__body .input-block.file-input .file-item input {
       font-size: 12px; }
 
-@media (max-width: 920px) {
-  .base-tab .scrollbar-inner > .scroll-element.scroll-y {
-    display: none; } }
-
 @media (min-width: 920px) {
   .base-tab.vertical {
     display: -webkit-box;

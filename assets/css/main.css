@@ -414,9 +414,10 @@ body {
     display: flex; }
     .page-filters .balance-filter .select {
       width: 30%;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      margin-right: 5px; }
     .page-filters .balance-filter .input-block {
-      width: 70%;
+      width: calc(70% - 5px);
       margin-bottom: 0; }
 
 .page-status {
@@ -691,14 +692,83 @@ body {
       width: 100%;
       background: #eee; }
 
+.table-container.--mobile {
+  display: none; }
+
+.table-container.--mobile .maximize-row-btn {
+  position: absolute;
+  top: 16px;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  background: #e6e6e6;
+  -webkit-border-radius: 50%;
+          border-radius: 50%; }
+
+.table-container.--mobile .maximize-row-btn svg {
+  width: 12px;
+  fill: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.table-container.--mobile td {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.05); }
+
+.table-container.--mobile td {
+  padding-right: 22px; }
+
+.table-container.--mobile .collapse-block {
+  display: none; }
+
+.table-container.--mobile td {
+  padding-left: 5px;
+  width: 100%;
+  min-width: initial !important; }
+
+.table-container.--mobile td .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.table-container.--mobile td .row .td-block {
+  width: 50%; }
+
+.table-container.--mobile .td-block {
+  margin-bottom: 20px; }
+
+.table-container.--mobile .td-block .label {
+  font-size: 15px;
+  font-weight: 400;
+  color: #737373; }
+
+.table-container.--mobile .td-block .data {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 500; }
+
+@media (max-width: 600px) {
+  .table-container.--desktop {
+    display: none; }
+  .table-container.--mobile {
+    display: block; } }
+
 @media (max-width: 880px) {
   .page-filters .icon {
     margin-bottom: 10px; }
   .page-filters .inputs-row .btn {
     margin-bottom: 15px; }
   .page-filters .inputs-row .balance-filter > .select {
-    min-width: 85px;
-    width: 85px; }
+    min-width: 85px; }
   .page-filters .inputs-row > .select,
   .page-filters .inputs-row .balance-filter,
   .page-filters .inputs-row > .input-block {

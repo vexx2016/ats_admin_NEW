@@ -333,6 +333,11 @@
           svgInit();
 
 
+            $('.maximize-row-btn').on('click', function (e) {
+              var block = $(this).closest('td');
+              block.find('.collapse-block').slideToggle()
+            })
+
              //  btn hamburger click
 
              $('.main-sidebar__hamburger').on('click',function(){
