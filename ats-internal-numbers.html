@@ -362,7 +362,7 @@
 						</div>
 						<div class="base-tab__body">
 							<div class="base-tab__block active">
-								<div class="table-container">
+								<div class="table-container --desktop">
 									<div class="table-header">
 										<span class="tbl-ttl">Контакты</span>
 										<button class="btn base-btn popup-btn__open" data-popup="contacts-popup" style="margin-bottom: 0px;">
@@ -440,6 +440,118 @@
 										</table>
 									</div>
 								</div>
+								<div class="table-container --mobile">
+									<div class="table-header">
+										<span class="tbl-ttl">Контакты</span>
+										<button class="btn base-btn popup-btn__open" data-popup="contacts-popup" style="margin-bottom: 0px;">
+											Создать
+										</button>
+										<div class="base-pagination" style="margin-right: 0;margin-left: auto;">
+											<div class="page-count">
+												<span>показать</span>
+												<dl class="select select-filter select-flag scrollable fill">
+													<dt class="">
+														<input type="text" name="scope" class="required" value="10">
+													</dt>
+													<dd>
+														<div class="select-options">
+															<div class="scroll-cont scrollbar-inner">
+																<a data-value="10">10</a>
+																<a data-value="20" >20</a>
+																<a data-value="50" >50</a>
+																<a data-value="100" >100</a>
+																<a data-value="200" >200</a>
+															</div>
+														</div>
+													</dd>
+												</dl>
+											</div>
+											<div class="page-btns">
+												<button class="btn prev">
+													Пред.
+												</button>
+												<button class="btn num active">1</button>
+												<button class="btn num">2</button>
+												<button class="btn next">
+													След.
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="table-body">
+										<table class="base-table">
+											<tbody>
+												<tr>
+													<td>
+														<div class="row">
+															<div class="btn maximize-row-btn">
+																<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+																	 viewBox="0 0 15 9" style="enable-background:new 0 0 15 9;" xml:space="preserve">
+																	<style type="text/css">
+																		.st0{display:none;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+																	</style>
+																	<polyline class="st0" points="1.1,1.5 7.5,7.5 13.9,1.5 "/>
+																	<g>
+																		<polygon points="7.5,8.8 0,1.7 1.5,0.2 7.5,5.9 13.5,0.2 15,1.7 	"/>
+																	</g>
+																</svg>
+															</div>
+															<div class="td-block">
+																<div class="label">ID</div>
+																<div class="data">3</div>
+															</div>
+															<div class="td-block">
+																<div class="label">Номер</div>
+																<div class="data">
+																	100
+																</div>
+															</div>
+														</div>
+														<div class="collapse-block">
+															<div class="td-block">
+																<div class="label">Имя звонящего</div>
+																<div class="data">
+																	Name Surname
+																</div>
+															</div>
+															<div class="td-block">
+																<div class="label">Исходящая схема</div>
+																<div class="data">
+																	+7(495)178-11-22 +7(495)178-11-22
+																</div>
+															</div>
+															<div class="td-block">
+																<div class="label">Статус телефона</div>
+																<div class="data">
+																	<div class="ats-status orange"><span class="circle"></span><span>Офлайн</span></div>
+																</div>
+															</div>
+															<div class="td-block">
+																<div class="label">Состояние</div>
+																<div class="data">
+																	<div class="ats-status green"><span class="circle"></span><span>Активный</span></div>
+																</div>
+															</div>
+															<div class="td-block">
+																<div class="data">
+																	<div class="action">
+																		<button class="btn table-action-btn edit"><svg>
+																			<use xlink:href="#edit"></use>
+																		</svg></button>
+																		<button class="btn table-action-btn delete"><svg>
+																			<use xlink:href="#remove"></use>
+																		</svg></button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!--  -->
 							</div>
 						</div>
 					</div>
