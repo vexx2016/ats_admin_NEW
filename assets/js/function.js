@@ -332,6 +332,24 @@
 
           svgInit();
 
+          // mini-player
+          $('.btn.play-btn').on('click', function (e) {
+               e.preventDefault();
+               $('.mini-player').toggleClass('show');
+           });
+          $('.mini-player .pause-btn').on('click', function (e) {
+               e.preventDefault();
+               $('.mini-player').removeClass('show');
+           });
+          
+          // table row click
+          $('.activate-popup .base-table tbody tr').on('click',function(){
+            $('.activate-popup .base-table tbody tr.selected').find('input[type="checkbox"]').prop('checked',false);
+            $('.activate-popup .base-table tbody tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+            $(this).find('input[type="checkbox"]').prop('checked',true);
+          });
+
 
             $('.maximize-row-btn').on('click', function (e) {
               var block = $(this).closest('td');

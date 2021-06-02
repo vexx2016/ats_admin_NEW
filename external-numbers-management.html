@@ -333,115 +333,395 @@
 			<div class="main-container">
 				<section class="main-container__body">
 					<div class="title">
-						<span class="over-title">АТС</span>
-						31231212412_9798243
+						Управление внешними номерами
 					</div>
-					<div class="base-tab ats-view__tab vertical">
-						<div class="base-tab__header">
-							<div class="scrollbar-inner">
-								<a href="ats-main.html" class="btn base-tab__btn " >АТС</a>
-								<a href="ats-company.html" class="btn base-tab__btn " >Компания</a>
-								<a href="ats-tariff-and-services.html" class="btn base-tab__btn" >Тариф и услуги</a>
-								<a href="ats-users.html" class="btn base-tab__btn" >Пользователи</a>
-								<a href="ats-allowed-ips.html" class="btn base-tab__btn " >Список разрешенных IP адресов</a>
-								<a href="ats-external-numbers.html" class="btn base-tab__btn " >Внешние номера</a>
-								<a href="ats-internal-numbers.html" class="btn base-tab__btn " >Внутренние номера</a>
-								<a href="ats-voicemail.html" class="btn base-tab__btn " >Голосовая почта</a>
-								<a href="ats-search-groups.html" class="btn base-tab__btn " >Группы</a>
-								<a href="ats-conferences.html" class="btn base-tab__btn " >Конференции</a>
-								<a href="ats-faxes.html" class="btn base-tab__btn " >Факсы</a>
-								<a href="ats-queues.html" class="btn base-tab__btn active" >Очереди</a>
-								<a href="ats-sound-files.html" class="btn base-tab__btn " >Звуковые файлы</a>
+					<div class="table-container --desktop">
+						<div class="table-header">
+							<button class="btn base-btn line page-filters__btn">
+								<svg><use xlink:href="#filter"></use></svg>
+								<span>Фильтры</span>
+							</button>
+							<div class="base-pagination">
+								<div class="page-count">
+									<span>показать</span>
+									<dl class="select select-filter select-flag scrollable fill">
+										<dt class="">
+											<input type="text" name="scope" class="required" value="10">
+										</dt>
+										<dd>
+											<div class="select-options">
+												<div class="scroll-cont scrollbar-inner">
+													<a data-value="10">10</a>
+													<a data-value="20" >20</a>
+													<a data-value="50" >50</a>
+													<a data-value="100" >100</a>
+													<a data-value="200" >200</a>
+												</div>
+											</div>
+										</dd>
+									</dl>
+								</div>
+								<div class="page-btns">
+									<button class="btn prev">
+										Пред.
+									</button>
+									<button class="btn num active">1</button>
+									<button class="btn num">2</button>
+									<button class="btn num">3</button>
+									<button class="btn num">4</button>
+									<button class="btn num">...</button>
+									<button class="btn num">78</button>
+									<button class="btn next">
+										След.
+									</button>
+								</div>
+							</div>
+							<div class="page-filters">
+								<div class="inputs-row">
+									<div class="input-block ">
+										<input type="text" id="input_id" name="input_id" placeholder="ID">
+									</div>
+									<div class="input-block ">
+										<input type="text" id="input_2" name="input_2" placeholder="Имя или ID АТС">
+									</div>
+									<div class="input-block ">
+										<input type="text" id="input_3" name="input_3" placeholder="Номер">
+									</div>
+									<dl class="select select-filter select-flag scrollable">
+										<dt class="">
+											<input type="text" name="scope" class="" placeholder="Все">
+										</dt>
+										<dd>
+											<div class="select-options">
+												<div class="scroll-cont scrollbar-inner">
+													<a data-value="10">10</a>
+													<a data-value="20" >20</a>
+												</div>
+											</div>
+										</dd>
+									</dl>
+									<dl class="select select-filter select-flag scrollable">
+										<dt class="">
+											<input type="text" name="scope" class="" placeholder="Все">
+										</dt>
+										<dd>
+											<div class="select-options">
+												<div class="scroll-cont scrollbar-inner">
+													<a data-value="10">10</a>
+													<a data-value="20" >20</a>
+												</div>
+											</div>
+										</dd>
+									</dl>
+									<div class="base-toggle --block">
+										<input type="checkbox" id="check_1" name="check_1">
+										<label for="check_1">
+											<span class="toggle-btn">
+												<span class="o"></span>
+											</span>
+											<span class="txt">Только конфликты</span>
+										</label>
+									</div>
+								</div>
+								<div class="btns-row">
+									<button class="btn base-btn ok-btn">OK</button>
+									<button class="btn base-btn grey">Очистить</button>
+								</div>
 							</div>
 						</div>
-						<div class="base-tab__body">
-							<div class="base-tab__block active">
-								<div class="table-container --desktop">
-									<div class="table-header">
-										<button class="btn base-btn popup-btn__open">
-											Создать очередь
-										</button>
-										<div class="input-block search">
-											<input type="text" id="input_search" name="input_search" placeholder="Поиск по имени">
-										</div>
-									</div>
-									<div class="table-body scrollbar-inner">
-										<table class="base-table">
-											<thead>
-												<tr>
-													<td>Название очереди</td>
-													<td>Внутренний номер</td>
-													<td>Стратегия обзвона</td>
-													<td>Номера участников</td>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-												</tr>
-												<!--  -->
-											</tbody>
-										</table>
-									</div>
+						<div class="table-body scrollbar-inner" style="padding-bottom: 30px;">
+							<table class="base-table">
+								<thead>
+									<tr>
+										<td>
+											<span>ID Billing</span>
+											<button class="btn table-sorting__btn">
+												<svg x="0px" y="0px" viewBox="0 0 384 384">
+												<g>
+													<polygon class="up" points="128,0 42.7,85.1 106.7,85.1 106.7,234.7 149.3,234.7 149.3,85.1 213.3,85.1 		"/>
+													<polygon class="down" points="277.3,298.9 277.3,149.3 234.7,149.3 234.7,298.9 170.7,298.9 256,384 341.3,298.9 		"/>
+												</g>
+												</svg>
+											</button>
+										</td>
+										<td>
+											<span>ID Public</span>
+											<button class="btn table-sorting__btn">
+												<svg x="0px" y="0px" viewBox="0 0 384 384">
+												<g>
+													<polygon class="up" points="128,0 42.7,85.1 106.7,85.1 106.7,234.7 149.3,234.7 149.3,85.1 213.3,85.1 		"/>
+													<polygon class="down" points="277.3,298.9 277.3,149.3 234.7,149.3 234.7,298.9 170.7,298.9 256,384 341.3,298.9 		"/>
+												</g>
+												</svg>
+											</button>
+										</td>
+										<td>
+											<span>Имя АТС(ID)</span>
+										</td>
+										<td>
+											<span>Номер</span>
+											<button class="btn table-sorting__btn up">
+												<svg x="0px" y="0px" viewBox="0 0 384 384">
+												<g>
+													<polygon class="up" points="128,0 42.7,85.1 106.7,85.1 106.7,234.7 149.3,234.7 149.3,85.1 213.3,85.1 		"/>
+													<polygon class="down" points="277.3,298.9 277.3,149.3 234.7,149.3 234.7,298.9 170.7,298.9 256,384 341.3,298.9 		"/>
+												</g>
+												</svg>
+											</button>
+										</td>
+										<td>
+											<span>Тип</span>
+											<button class="btn table-sorting__btn">
+												<svg x="0px" y="0px" viewBox="0 0 384 384">
+												<g>
+													<polygon class="up" points="128,0 42.7,85.1 106.7,85.1 106.7,234.7 149.3,234.7 149.3,85.1 213.3,85.1 		"/>
+													<polygon class="down" points="277.3,298.9 277.3,149.3 234.7,149.3 234.7,298.9 170.7,298.9 256,384 341.3,298.9 		"/>
+												</g>
+												</svg>
+											</button>
+										</td>
+										<td>
+											<span>Статус</span>
+											<button class="btn table-sorting__btn down">
+												<svg x="0px" y="0px" viewBox="0 0 384 384">
+												<g>
+													<polygon class="up" points="128,0 42.7,85.1 106.7,85.1 106.7,234.7 149.3,234.7 149.3,85.1 213.3,85.1 		"/>
+													<polygon class="down" points="277.3,298.9 277.3,149.3 234.7,149.3 234.7,298.9 170.7,298.9 256,384 341.3,298.9 		"/>
+												</g>
+												</svg>
+											</button>
+										</td>
+										<td></td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>6655</td>
+										<td>8310</td>
+										<td>31231212412_9798243(11234)</td>
+										<td>79797974332</td>
+										<td>Обычный</td>
+										<td><div class="ats-status green"><span class="circle"></span><span>Свободен</span></div></td>
+										<td>
+											<div class="base-toggle base-tooltip table-action-btn popup-btn__open" data-tooltip="Активировать" data-popup="activate-popup" style="margin-right: 10px">
+												<input type="checkbox" id="check_11" name="check_11">
+												<label for="check_11">
+													<span class="toggle-btn">
+														<span class="o"></span>
+													</span>
+												</label>
+											</div>
+											<button class="btn table-action-btn delete popup-btn__open" data-popup="delete-popup"><svg>
+												<use xlink:href="#remove"></use>
+											</svg></button>
+										</td>
+									</tr>
+									<tr>
+										<td>6722</td>
+										<td>137</td>
+										<td>767653354_876556(93)</td>
+										<td>4993657711</td>
+										<td><div class="number-type gold"><span class="circle"></span><span>Золотой</span></div></td>
+										<td><div class="ats-status red"><span class="circle"></span><span>Занят</span></div></td>
+										<td>
+											<div class="base-toggle base-tooltip table-action-btn popup-btn__open" data-tooltip="Деактивировать" data-popup="activate-popup" style="margin-right: 10px">
+												<input type="checkbox" id="check_112" name="check_112" checked>
+												<label for="check_112">
+													<span class="toggle-btn">
+														<span class="o"></span>
+													</span>
+												</label>
+											</div>
+											<button class="btn table-action-btn delete popup-btn__open" data-popup="delete-popup"><svg>
+												<use xlink:href="#remove"></use>
+											</svg></button>
+										</td>
+									</tr>
+									<tr>
+										<td>6513</td>
+										<td>229</td>
+										<td>736289176218879_876328(112)</td>
+										<td>499010327737</td>
+										<td><div class="number-type bronze"><span class="circle"></span><span>Бронзовый</span></div></td>
+										<td><div class="ats-status red"><span class="circle"></span><span>Занят</span></div></td>
+										<td>
+											<div class="base-toggle base-tooltip table-action-btn popup-btn__open" data-tooltip="Активировать" data-popup="activate-popup" style="margin-right: 10px">
+												<input type="checkbox" id="check_113" name="check_113">
+												<label for="check_113">
+													<span class="toggle-btn">
+														<span class="o"></span>
+													</span>
+												</label>
+											</div>
+											<button class="btn table-action-btn delete popup-btn__open" data-popup="delete-popup"><svg>
+												<use xlink:href="#remove"></use>
+											</svg></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="table-container --mobile">
+						<div class="table-header">
+							<button class="btn base-btn line page-filters__btn">
+								<svg><use xlink:href="#filter"></use></svg>
+								<span>Фильтры</span>
+							</button>
+							<div class="base-pagination">
+								<div class="page-count">
+									<span>показать</span>
+									<dl class="select select-filter select-flag scrollable fill">
+										<dt class="">
+											<input type="text" name="scope" class="required" value="10">
+										</dt>
+										<dd>
+											<div class="select-options">
+												<div class="scroll-cont scrollbar-inner">
+													<a data-value="10">10</a>
+													<a data-value="20" >20</a>
+													<a data-value="50" >50</a>
+													<a data-value="100" >100</a>
+													<a data-value="200" >200</a>
+												</div>
+											</div>
+										</dd>
+									</dl>
 								</div>
-								<div class="table-container --mobile">
-									<div class="table-header">
-										<button class="btn base-btn popup-btn__open">
-											Создать очередь
-										</button>
-										<div class="input-block search">
-											<input type="text" id="input_search" name="input_search" placeholder="Поиск по имени">
-										</div>
-									</div>
-									<div class="table-body">
-										<table class="base-table">
-											<tbody>
-												<tr>
-													<td>
-														<div class="row">
-															<div class="btn maximize-row-btn">
-																<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-																	 viewBox="0 0 15 9" style="enable-background:new 0 0 15 9;" xml:space="preserve">
-																	<style type="text/css">
-																		.st0{display:none;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
-																	</style>
-																	<polyline class="st0" points="1.1,1.5 7.5,7.5 13.9,1.5 "/>
-																	<g>
-																		<polygon points="7.5,8.8 0,1.7 1.5,0.2 7.5,5.9 13.5,0.2 15,1.7 	"/>
-																	</g>
-																</svg>
-															</div>
-															<div class="td-block">
-																<div class="label">Название очереди</div>
-																<div class="data">-</div>
-															</div>
-															<div class="td-block">
-																<div class="label">Внутренний номер</div>
-																<div class="data">
-																	-
-																</div>
-															</div>
-														</div>
-														<div class="collapse-block">
-															<div class="td-block">
-																<div class="label">Стратегия обзвона</div>
-																<div class="data">
-																	-
-																</div>
-															</div>
-															<div class="td-block">
-																<div class="label">Номера участников</div>
-																<div class="data">
-																	-
-																</div>
-															</div>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
+								<div class="page-btns">
+									<button class="btn prev">
+										Пред.
+									</button>
+									<button class="btn num active">1</button>
+									<button class="btn num">2</button>
+									<button class="btn num">3</button>
+									<button class="btn num">4</button>
+									<button class="btn num">...</button>
+									<button class="btn num">78</button>
+									<button class="btn next">
+										След.
+									</button>
 								</div>
 							</div>
+							<div class="page-filters">
+								<div class="inputs-row">
+									<div class="input-block ">
+										<input type="text" id="input_id" name="input_id" placeholder="ID">
+									</div>
+									<div class="input-block ">
+										<input type="text" id="input_2" name="input_2" placeholder="Имя или ID АТС">
+									</div>
+									<div class="input-block ">
+										<input type="text" id="input_3" name="input_3" placeholder="Номер">
+									</div>
+									<dl class="select select-filter select-flag scrollable">
+										<dt class="">
+											<input type="text" name="scope" class="" placeholder="Все">
+										</dt>
+										<dd>
+											<div class="select-options">
+												<div class="scroll-cont scrollbar-inner">
+													<a data-value="10">10</a>
+													<a data-value="20" >20</a>
+												</div>
+											</div>
+										</dd>
+									</dl>
+									<dl class="select select-filter select-flag scrollable">
+										<dt class="">
+											<input type="text" name="scope" class="" placeholder="Все">
+										</dt>
+										<dd>
+											<div class="select-options">
+												<div class="scroll-cont scrollbar-inner">
+													<a data-value="10">10</a>
+													<a data-value="20" >20</a>
+												</div>
+											</div>
+										</dd>
+									</dl>
+									<div class="base-toggle --block">
+										<input type="checkbox" id="check_1" name="check_1">
+										<label for="check_1">
+											<span class="toggle-btn">
+												<span class="o"></span>
+											</span>
+											<span class="txt">Только конфликты</span>
+										</label>
+									</div>
+								</div>
+								<div class="btns-row">
+									<button class="btn base-btn ok-btn">OK</button>
+									<button class="btn base-btn grey">Очистить</button>
+								</div>
+							</div>
+						</div>
+						<div class="table-body">
+							<table class="base-table">
+								<tbody>
+									<tr>
+										<td>
+											<div class="row">
+												<div class="btn maximize-row-btn">
+													<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+														 viewBox="0 0 15 9" style="enable-background:new 0 0 15 9;" xml:space="preserve">
+														<style type="text/css">
+															.st0{display:none;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+														</style>
+														<polyline class="st0" points="1.1,1.5 7.5,7.5 13.9,1.5 "/>
+														<g>
+															<polygon points="7.5,8.8 0,1.7 1.5,0.2 7.5,5.9 13.5,0.2 15,1.7 	"/>
+														</g>
+													</svg>
+												</div>
+												<div class="td-block">
+													<div class="label">ID Billing</div>
+													<div class="data">6655</div>
+												</div>
+												<div class="td-block">
+													<div class="label">ID Public</div>
+													<div class="data">8310</div>
+												</div>
+											</div>
+											<div class="collapse-block">
+												<div class="td-block">
+													<div class="label">Имя АТС(ID)</div>
+													<div class="data">31231212412_9798243(11234)</div>
+												</div>
+												<div class="td-block">
+													<div class="label">Номер</div>
+													<div class="data">79797974332</div>
+												</div>
+												<div class="td-block">
+													<div class="label">Тип</div>
+													<div class="data"><div class="number-type gold"><span class="circle"></span><span>Золотой</span></div></div>
+												</div>
+												<div class="td-block">
+													<div class="label">Статус</div>
+													<div class="data"><div class="ats-status red"><span class="circle"></span><span>Ошибка</span></div></div>
+												</div>
+												<div class="td-block">
+													<div class="data">
+														<div class="action">
+															<div class="base-toggle table-action-btn popup-btn__open" data-popup="activate-popup" style="margin-right: 10px">
+																<input type="checkbox" id="check_113" name="check_113">
+																<label for="check_113">
+																	<span class="toggle-btn">
+																		<span class="o"></span>
+																	</span>
+																</label>
+															</div>
+															<button class="btn table-action-btn delete popup-btn__open" data-popup="delete-popup"><svg>
+																<use xlink:href="#remove"></use>
+															</svg></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 					<!--  -->
@@ -568,71 +848,138 @@
 					</div>
 				</section>
 				<!--  -->
-				<!--  -->
-				<div class="base-popup">
-					<div class="base-popup__container" >
-						<div class="base-popup__title">Создать очередь</div>
-						<form action="">
-							<div class="col">
-								<div class="input-block required">
-									<label for="input_2">Название очереди</label>
-									<input type="text" id="input_2" name="input_2">
-								</div>
-								<div class="input-block required">
-									<label for="input_1">Внутренний номер</label>
-									<input type="text" id="input_1" name="input_1">
-								</div>
-								<div class="select-block ">
-									<label>Стратегия дозвона</label>
-									<dl class="select select-filter select-flag scrollable">
-										<dt class="">
-											<input type="text" name="scope" class="required">
-										</dt>
-										<dd>
-											<div class="select-options">
-												<div class="scroll-cont scrollbar-inner">
-													<a data-value="10">Активный</a>
-													<a data-value="20" >Не активный</a>
-												</div>
-											</div>
-										</dd>
-									</dl>
-								</div>
-							</div>
-							<div class="col">
-								<div class="select-block">
-									<label>Музыка ожидания</label>
-									<dl class="select select-filter select-flag scrollable">
-										<dt class="">
-											<input type="text" name="scope" class="required">
-										</dt>
-										<dd>
-											<div class="select-options">
-												<div class="scroll-cont scrollbar-inner">
-													<a data-value="10">Вариант 1</a>
-													<a data-value="20" >Вариант 2</a>
-												</div>
-											</div>
-										</dd>
-									</dl>
-								</div>
-								<div class="input-block">
-									<label for="input_735">Время ожидания в очереди</label>
-									<input type="text" id="input_735" name="input_735">
-								</div>
-								<div class="input-block">
-									<label for="input_735">Повтор</label>
-									<input type="text" id="input_735" name="input_735">
-								</div>
-							</div>
-						</form>
+				<div class="base-popup" data-popup="delete-popup">
+					<div class="base-popup__container">
+						<div class="base-popup__title">Удалить</div>
+						<p>Вы действительно хотите удалить номер 4951090390493?</p>
 						<div class="base-popup__footer">
-							<button class="btn base-btn grey popup-btn__close" >Отмена</button>
-							<button class="btn base-btn">Создать</button>
+							<button class="btn base-btn grey popup-btn__close" data-popup="delete-popup">Отмена</button>
+							<button class="btn base-btn red">Удалить</button>
 						</div>
 					</div>
 				</div>
 				<!--  -->
+				<!--  -->
+				<div class="base-popup activate-popup" data-popup="activate-popup" >
+					<div class="base-popup__container" style="max-width: 640px;">
+						<div class="base-popup__title">К какой АТС подключить номер?</div>
+						<div class="table-container">
+							<div class="table-header">
+								<div class="page-filters mobile">
+									<svg><use xlink:href="#filter"></use></svg>
+									<div class="inputs-row">
+										<div class="input-block" style="max-width: 100px">
+											<input type="text" id="input_id" name="input_id" placeholder="ID">
+										</div>
+										<div class="input-block ">
+											<input type="text" id="input_2" name="input_2" placeholder="Имя">
+										</div>
+									</div>
+									<button class="btn base-btn ok-btn">OK</button>
+								</div>
+								<div class="base-pagination">
+									<div class="page-count">
+										<span>показать</span>
+										<dl class="select select-filter select-flag scrollable fill">
+											<dt class="">
+												<input type="text" name="scope" class="required" value="10">
+											</dt>
+											<dd>
+												<div class="select-options">
+													<div class="scroll-cont scrollbar-inner">
+														<a data-value="10">10</a>
+														<a data-value="20" >20</a>
+														<a data-value="50" >50</a>
+														<a data-value="100" >100</a>
+														<a data-value="200" >200</a>
+													</div>
+												</div>
+											</dd>
+										</dl>
+									</div>
+									<div class="page-btns">
+										<button class="btn next">
+											След.
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="table-body">
+								<table class="base-table">
+									<thead>
+										<tr>
+											<td>
+												<span>ID</span>
+												<button class="btn table-sorting__btn">
+													<svg x="0px" y="0px" viewBox="0 0 384 384">
+													<g>
+														<polygon class="up" points="128,0 42.7,85.1 106.7,85.1 106.7,234.7 149.3,234.7 149.3,85.1 213.3,85.1 		"/>
+														<polygon class="down" points="277.3,298.9 277.3,149.3 234.7,149.3 234.7,298.9 170.7,298.9 256,384 341.3,298.9 		"/>
+													</g>
+													</svg>
+												</button>
+											</td>
+											<td>
+												<span>Имя АТС</span>
+												<button class="btn table-sorting__btn">
+													<svg x="0px" y="0px" viewBox="0 0 384 384">
+													<g>
+														<polygon class="up" points="128,0 42.7,85.1 106.7,85.1 106.7,234.7 149.3,234.7 149.3,85.1 213.3,85.1 		"/>
+														<polygon class="down" points="277.3,298.9 277.3,149.3 234.7,149.3 234.7,298.9 170.7,298.9 256,384 341.3,298.9 		"/>
+													</g>
+													</svg>
+												</button>
+											</td>
+											<td></td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>45</td>
+											<td>31231212412_9798243</td>
+											<td>
+												<div class="base-checkbox table-action-btn select-activate-number">
+													<input type="checkbox" id="pp1" name="pp1">
+													<label for="pp1">
+														<div class="check"></div>
+													</label>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>49</td>
+											<td>37636736_4387437843</td>
+											<td>
+												<div class="base-checkbox table-action-btn select-activate-number">
+													<input type="checkbox" id="pp1" name="pp1">
+													<label for="pp1">
+														<div class="check"></div>
+													</label>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>54</td>
+											<td>1982138933_34783487</td>
+											<td>
+												<div class="base-checkbox table-action-btn select-activate-number">
+													<input type="checkbox" id="pp1" name="pp1">
+													<label for="pp1">
+														<div class="check"></div>
+													</label>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="base-popup__footer">
+							<button class="btn base-btn grey popup-btn__close" data-popup="activate-popup">Отмена</button>
+							<button class="btn base-btn">Активировать</button>
+						</div>
+					</div>
+				</div>
 				<!--  -->
 			</div>
 		</div>

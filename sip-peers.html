@@ -333,115 +333,309 @@
 			<div class="main-container">
 				<section class="main-container__body">
 					<div class="title">
-						<span class="over-title">АТС</span>
-						31231212412_9798243
+						Sip Peers
 					</div>
-					<div class="base-tab ats-view__tab vertical">
-						<div class="base-tab__header">
-							<div class="scrollbar-inner">
-								<a href="ats-main.html" class="btn base-tab__btn " >АТС</a>
-								<a href="ats-company.html" class="btn base-tab__btn " >Компания</a>
-								<a href="ats-tariff-and-services.html" class="btn base-tab__btn" >Тариф и услуги</a>
-								<a href="ats-users.html" class="btn base-tab__btn" >Пользователи</a>
-								<a href="ats-allowed-ips.html" class="btn base-tab__btn " >Список разрешенных IP адресов</a>
-								<a href="ats-external-numbers.html" class="btn base-tab__btn " >Внешние номера</a>
-								<a href="ats-internal-numbers.html" class="btn base-tab__btn " >Внутренние номера</a>
-								<a href="ats-voicemail.html" class="btn base-tab__btn " >Голосовая почта</a>
-								<a href="ats-search-groups.html" class="btn base-tab__btn " >Группы</a>
-								<a href="ats-conferences.html" class="btn base-tab__btn " >Конференции</a>
-								<a href="ats-faxes.html" class="btn base-tab__btn " >Факсы</a>
-								<a href="ats-queues.html" class="btn base-tab__btn active" >Очереди</a>
-								<a href="ats-sound-files.html" class="btn base-tab__btn " >Звуковые файлы</a>
+					<div class="table-container --desktop">
+						<div class="table-header">
+							<button class="btn base-btn line page-filters__btn">
+								<svg><use xlink:href="#filter"></use></svg>
+								<span>Фильтры</span>
+							</button>
+							<div class="base-pagination">
+								<div class="page-count">
+									<span>показать</span>
+									<dl class="select select-filter select-flag scrollable fill">
+										<dt class="">
+											<input type="text" name="scope" class="required" value="10">
+										</dt>
+										<dd>
+											<div class="select-options">
+												<div class="scroll-cont scrollbar-inner">
+													<a data-value="10">10</a>
+													<a data-value="20" >20</a>
+													<a data-value="50" >50</a>
+													<a data-value="100" >100</a>
+													<a data-value="200" >200</a>
+												</div>
+											</div>
+										</dd>
+									</dl>
+								</div>
+								<div class="page-btns">
+									<button class="btn prev">
+										Пред.
+									</button>
+									<button class="btn num active">1</button>
+									<button class="btn num">2</button>
+									<button class="btn num">3</button>
+									<button class="btn num">4</button>
+									<button class="btn num">...</button>
+									<button class="btn num">78</button>
+									<button class="btn next">
+										След.
+									</button>
+								</div>
+							</div>
+							<div class="page-filters">
+								<div class="inputs-row">
+									<div class="input-block ">
+										<input type="text" id="input_1" name="input_1" placeholder="Имя">
+									</div>
+									<dl class="select select-filter select-flag scrollable">
+										<dt class="">
+											<input type="text" name="scope" class="" placeholder="Все">
+										</dt>
+										<dd>
+											<div class="select-options">
+												<div class="scroll-cont scrollbar-inner">
+													<a data-value="10">10</a>
+													<a data-value="20" >20</a>
+												</div>
+											</div>
+										</dd>
+									</dl>
+									<div class="input-block ">
+										<input type="text" id="input_12" name="input_12" placeholder="Адрес">
+									</div>
+									<div class="input-block ">
+										<input type="text" id="input_15" name="input_15" placeholder="User Agent">
+									</div>
+									<div class="input-block ">
+										<input type="text" id="input_13" name="input_13" placeholder="Дата начала">
+									</div>
+									<div class="input-block ">
+										<input type="text" id="input_14" name="input_14" placeholder="Дата окончания">
+									</div>
+								</div>
+								<div class="btns-row">
+									<button class="btn base-btn ok-btn">OK</button>
+									<button class="btn base-btn grey">Очистить</button>
+								</div>
 							</div>
 						</div>
-						<div class="base-tab__body">
-							<div class="base-tab__block active">
-								<div class="table-container --desktop">
-									<div class="table-header">
-										<button class="btn base-btn popup-btn__open">
-											Создать очередь
-										</button>
-										<div class="input-block search">
-											<input type="text" id="input_search" name="input_search" placeholder="Поиск по имени">
-										</div>
-									</div>
-									<div class="table-body scrollbar-inner">
-										<table class="base-table">
-											<thead>
-												<tr>
-													<td>Название очереди</td>
-													<td>Внутренний номер</td>
-													<td>Стратегия обзвона</td>
-													<td>Номера участников</td>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-												</tr>
-												<!--  -->
-											</tbody>
-										</table>
-									</div>
+						<div class="table-body scrollbar-inner" style="padding-bottom: 30px;">
+							<table class="base-table">
+								<thead>
+									<tr>
+										<td>
+											<span>Имя</span>
+											<button class="btn table-sorting__btn">
+												<svg x="0px" y="0px" viewBox="0 0 384 384">
+												<g>
+													<polygon class="up" points="128,0 42.7,85.1 106.7,85.1 106.7,234.7 149.3,234.7 149.3,85.1 213.3,85.1 		"/>
+													<polygon class="down" points="277.3,298.9 277.3,149.3 234.7,149.3 234.7,298.9 170.7,298.9 256,384 341.3,298.9 		"/>
+												</g>
+												</svg>
+											</button>
+										</td>
+										<td>
+											<span>Статус</span>
+											<button class="btn table-sorting__btn">
+												<svg x="0px" y="0px" viewBox="0 0 384 384">
+												<g>
+													<polygon class="up" points="128,0 42.7,85.1 106.7,85.1 106.7,234.7 149.3,234.7 149.3,85.1 213.3,85.1 		"/>
+													<polygon class="down" points="277.3,298.9 277.3,149.3 234.7,149.3 234.7,298.9 170.7,298.9 256,384 341.3,298.9 		"/>
+												</g>
+												</svg>
+											</button>
+										</td>
+										<td>
+											<span>Адрес</span>
+										</td>
+										<td>
+											<span>Порт</span>
+										</td>
+										<td>
+											<span>User Agent</span>
+										</td>
+										<td>
+											<span>Время</span>
+											<button class="btn table-sorting__btn">
+												<svg x="0px" y="0px" viewBox="0 0 384 384">
+												<g>
+													<polygon class="up" points="128,0 42.7,85.1 106.7,85.1 106.7,234.7 149.3,234.7 149.3,85.1 213.3,85.1 		"/>
+													<polygon class="down" points="277.3,298.9 277.3,149.3 234.7,149.3 234.7,298.9 170.7,298.9 256,384 341.3,298.9 		"/>
+												</g>
+												</svg>
+											</button>
+										</td>
+										<td>
+											<span>Сервер(ID)</span>
+										</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>5672_00001</td>
+										<td><div class="ats-status red"><span class="circle"></span><span>Офлайн</span></div></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>22.02.2021 09:11:43</td>
+										<td>10.9.0.1(16)</td>
+									</tr>
+									<tr>
+										<td>5371_001381</td>
+										<td><div class="ats-status grey"><span class="circle"></span><span>Отключен</span></div></td>
+										<td>10.1.0.2</td>
+										<td>42258</td>
+										<td>Zoiper rv2.9RC37-312-dfhj378</td>
+										<td>22.02.2021 09:11:43</td>
+										<td>10.9.0.1(16)</td>
+									</tr>
+									<tr>
+										<td>3411_001092</td>
+										<td><div class="ats-status green"><span class="circle"></span><span>В сети</span></div></td>
+										<td>10.1.0.2</td>
+										<td>42258</td>
+										<td>Zoiper rv2.9RC37-312-dfhj378</td>
+										<td>22.02.2021 09:11:43</td>
+										<td>10.9.0.1(16)</td>
+									</tr>
+									<tr>
+										<td>3411_001092</td>
+										<td><div class="ats-status orange"><span class="circle"></span><span>Не в сети</span></div></td>
+										<td>10.1.0.2</td>
+										<td>42258</td>
+										<td>Zoiper rv2.9RC37-312-dfhj378</td>
+										<td>22.02.2021 09:11:43</td>
+										<td>10.9.0.1(16)</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="table-container --mobile">
+						<div class="table-header">
+							<button class="btn base-btn line page-filters__btn">
+								<svg><use xlink:href="#filter"></use></svg>
+								<span>Фильтры</span>
+							</button>
+							<div class="base-pagination">
+								<div class="page-count">
+									<span>показать</span>
+									<dl class="select select-filter select-flag scrollable fill">
+										<dt class="">
+											<input type="text" name="scope" class="required" value="10">
+										</dt>
+										<dd>
+											<div class="select-options">
+												<div class="scroll-cont scrollbar-inner">
+													<a data-value="10">10</a>
+													<a data-value="20" >20</a>
+													<a data-value="50" >50</a>
+													<a data-value="100" >100</a>
+													<a data-value="200" >200</a>
+												</div>
+											</div>
+										</dd>
+									</dl>
 								</div>
-								<div class="table-container --mobile">
-									<div class="table-header">
-										<button class="btn base-btn popup-btn__open">
-											Создать очередь
-										</button>
-										<div class="input-block search">
-											<input type="text" id="input_search" name="input_search" placeholder="Поиск по имени">
-										</div>
-									</div>
-									<div class="table-body">
-										<table class="base-table">
-											<tbody>
-												<tr>
-													<td>
-														<div class="row">
-															<div class="btn maximize-row-btn">
-																<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-																	 viewBox="0 0 15 9" style="enable-background:new 0 0 15 9;" xml:space="preserve">
-																	<style type="text/css">
-																		.st0{display:none;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
-																	</style>
-																	<polyline class="st0" points="1.1,1.5 7.5,7.5 13.9,1.5 "/>
-																	<g>
-																		<polygon points="7.5,8.8 0,1.7 1.5,0.2 7.5,5.9 13.5,0.2 15,1.7 	"/>
-																	</g>
-																</svg>
-															</div>
-															<div class="td-block">
-																<div class="label">Название очереди</div>
-																<div class="data">-</div>
-															</div>
-															<div class="td-block">
-																<div class="label">Внутренний номер</div>
-																<div class="data">
-																	-
-																</div>
-															</div>
-														</div>
-														<div class="collapse-block">
-															<div class="td-block">
-																<div class="label">Стратегия обзвона</div>
-																<div class="data">
-																	-
-																</div>
-															</div>
-															<div class="td-block">
-																<div class="label">Номера участников</div>
-																<div class="data">
-																	-
-																</div>
-															</div>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
+								<div class="page-btns">
+									<button class="btn prev">
+										Пред.
+									</button>
+									<button class="btn num active">1</button>
+									<button class="btn num">2</button>
+									<button class="btn num">3</button>
+									<button class="btn num">4</button>
+									<button class="btn num">...</button>
+									<button class="btn num">78</button>
+									<button class="btn next">
+										След.
+									</button>
 								</div>
 							</div>
+							<div class="page-filters">
+								<div class="inputs-row">
+									<div class="input-block ">
+										<input type="text" id="input_1" name="input_1" placeholder="Имя">
+									</div>
+									<dl class="select select-filter select-flag scrollable">
+										<dt class="">
+											<input type="text" name="scope" class="" placeholder="Все">
+										</dt>
+										<dd>
+											<div class="select-options">
+												<div class="scroll-cont scrollbar-inner">
+													<a data-value="10">10</a>
+													<a data-value="20" >20</a>
+												</div>
+											</div>
+										</dd>
+									</dl>
+									<div class="input-block ">
+										<input type="text" id="input_12" name="input_12" placeholder="Адрес">
+									</div>
+									<div class="input-block ">
+										<input type="text" id="input_15" name="input_15" placeholder="User Agent">
+									</div>
+									<div class="input-block ">
+										<input type="text" id="input_13" name="input_13" placeholder="Дата начала">
+									</div>
+									<div class="input-block ">
+										<input type="text" id="input_14" name="input_14" placeholder="Дата окончания">
+									</div>
+								</div>
+								<div class="btns-row">
+									<button class="btn base-btn ok-btn">OK</button>
+									<button class="btn base-btn grey">Очистить</button>
+								</div>
+							</div>
+						</div>
+						<div class="table-body">
+							<table class="base-table">
+								<tbody>
+									<tr>
+										<td>
+											<div class="row">
+												<div class="btn maximize-row-btn">
+													<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+														 viewBox="0 0 15 9" style="enable-background:new 0 0 15 9;" xml:space="preserve">
+														<style type="text/css">
+															.st0{display:none;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+														</style>
+														<polyline class="st0" points="1.1,1.5 7.5,7.5 13.9,1.5 "/>
+														<g>
+															<polygon points="7.5,8.8 0,1.7 1.5,0.2 7.5,5.9 13.5,0.2 15,1.7 	"/>
+														</g>
+													</svg>
+												</div>
+												<div class="td-block">
+													<div class="label">Имя</div>
+													<div class="data">5672_00001</div>
+												</div>
+												<div class="td-block">
+													<div class="label">Статус</div>
+													<div class="data"><div class="ats-status red"><span class="circle"></span><span>Офлайн</span></div></div>
+												</div>
+											</div>
+											<div class="collapse-block">
+												<div class="td-block">
+													<div class="label">Адрес</div>
+													<div class="data">-</div>
+												</div>
+												<div class="td-block">
+													<div class="label">Порт</div>
+													<div class="data">-</div>
+												</div>
+												<div class="td-block">
+													<div class="label">User Agent</div>
+													<div class="data">-</div>
+												</div>
+												<div class="td-block">
+													<div class="label">Время</div>
+													<div class="data">22.02.2021 09:11:43</div>
+												</div>
+												<div class="td-block">
+													<div class="label">Сервер(ID)</div>
+													<div class="data">10.9.0.1(16)</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 					<!--  -->
@@ -568,71 +762,84 @@
 					</div>
 				</section>
 				<!--  -->
-				<!--  -->
-				<div class="base-popup">
-					<div class="base-popup__container" >
-						<div class="base-popup__title">Создать очередь</div>
-						<form action="">
-							<div class="col">
-								<div class="input-block required">
-									<label for="input_2">Название очереди</label>
-									<input type="text" id="input_2" name="input_2">
-								</div>
-								<div class="input-block required">
-									<label for="input_1">Внутренний номер</label>
-									<input type="text" id="input_1" name="input_1">
-								</div>
-								<div class="select-block ">
-									<label>Стратегия дозвона</label>
-									<dl class="select select-filter select-flag scrollable">
-										<dt class="">
-											<input type="text" name="scope" class="required">
-										</dt>
-										<dd>
-											<div class="select-options">
-												<div class="scroll-cont scrollbar-inner">
-													<a data-value="10">Активный</a>
-													<a data-value="20" >Не активный</a>
-												</div>
-											</div>
-										</dd>
-									</dl>
-								</div>
-							</div>
-							<div class="col">
-								<div class="select-block">
-									<label>Музыка ожидания</label>
-									<dl class="select select-filter select-flag scrollable">
-										<dt class="">
-											<input type="text" name="scope" class="required">
-										</dt>
-										<dd>
-											<div class="select-options">
-												<div class="scroll-cont scrollbar-inner">
-													<a data-value="10">Вариант 1</a>
-													<a data-value="20" >Вариант 2</a>
-												</div>
-											</div>
-										</dd>
-									</dl>
-								</div>
-								<div class="input-block">
-									<label for="input_735">Время ожидания в очереди</label>
-									<input type="text" id="input_735" name="input_735">
-								</div>
-								<div class="input-block">
-									<label for="input_735">Повтор</label>
-									<input type="text" id="input_735" name="input_735">
-								</div>
-							</div>
-						</form>
+				<div class="base-popup" data-popup="show-popup">
+					<div class="base-popup__container">
+						<div class="base-popup__title">Удалить</div>
+						<p>Вы действительно хотите удалить номер 4951090390493?</p>
 						<div class="base-popup__footer">
-							<button class="btn base-btn grey popup-btn__close" >Отмена</button>
-							<button class="btn base-btn">Создать</button>
+							<button class="btn base-btn grey popup-btn__close" data-popup="show-popup">Отмена</button>
 						</div>
 					</div>
 				</div>
 				<!--  -->
+				<div class="mini-player">
+					<button class="btn pause-btn">
+						<svg height="327pt" viewBox="-45 0 327 327" width="327pt" xmlns="http://www.w3.org/2000/svg"><path d="m158 0h71c4.417969 0 8 3.582031 8 8v311c0 4.417969-3.582031 8-8 8h-71c-4.417969 0-8-3.582031-8-8v-311c0-4.417969 3.582031-8 8-8zm0 0"/><path d="m8 0h71c4.417969 0 8 3.582031 8 8v311c0 4.417969-3.582031 8-8 8h-71c-4.417969 0-8-3.582031-8-8v-311c0-4.417969 3.582031-8 8-8zm0 0"/></svg>
+					</button>
+					<div class="track">
+						<div class="start">0:35</div>
+						<div class="end">1:34</div>
+						<div class="line">
+							<div class="duration" style="width: 23%"></div>
+						</div>
+					</div>
+					<div class="volume">
+						<div class="ico">
+							<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+<path d="M278.944,17.577c-5.568-2.656-12.128-1.952-16.928,1.92L106.368,144.009H32c-17.632,0-32,14.368-32,32v128
+	c0,17.664,14.368,32,32,32h74.368l155.616,124.512c2.912,2.304,6.464,3.488,10.016,3.488c2.368,0,4.736-0.544,6.944-1.6
+	c5.536-2.656,9.056-8.256,9.056-14.4v-416C288,25.865,284.48,20.265,278.944,17.577z"/>
+<path d="M368.992,126.857c-6.304-6.208-16.416-6.112-22.624,0.128c-6.208,6.304-6.144,16.416,0.128,22.656
+	C370.688,173.513,384,205.609,384,240.009s-13.312,66.496-37.504,90.368c-6.272,6.176-6.336,16.32-0.128,22.624
+	c3.136,3.168,7.264,4.736,11.36,4.736c4.064,0,8.128-1.536,11.264-4.64C399.328,323.241,416,283.049,416,240.009
+	S399.328,156.777,368.992,126.857z"/>
+<path d="M414.144,81.769c-6.304-6.24-16.416-6.176-22.656,0.096c-6.208,6.272-6.144,16.416,0.096,22.624
+	C427.968,140.553,448,188.681,448,240.009s-20.032,99.424-56.416,135.488c-6.24,6.24-6.304,16.384-0.096,22.656
+	c3.168,3.136,7.264,4.704,11.36,4.704c4.064,0,8.16-1.536,11.296-4.64C456.64,356.137,480,299.945,480,240.009
+	S456.64,123.881,414.144,81.769z"/>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+						</div>
+						<div class="level">
+							<div class="bg">
+								<div class="value" style="height: 45%"></div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!--  -->
 			</div>
 		</div>
