@@ -1058,7 +1058,6 @@ body {
       font-weight: bold;
       margin-bottom: 34px; }
     .main-container__body .over-title {
-      font-size: 14px;
       color: #a2a2a2;
       font-weight: normal;
       display: block;
@@ -1126,9 +1125,9 @@ body {
           -ms-flex-direction: column;
               flex-direction: column; }
       .main-container .dashboard-card.servers .scroll-wrapper {
-        margin-right: -8px; }
+        margin-right: -10px; }
       .main-container .dashboard-card.servers .scroll-wrapper > .scroll-content {
-        padding-right: 10px; }
+        padding-right: 16px; }
       .main-container .dashboard-card.servers .filters {
         margin-right: 0;
         margin-left: auto; }
@@ -1192,7 +1191,7 @@ body {
           -ms-flex-direction: column;
               flex-direction: column; }
       .main-container .dashboard-card.processes .scrollbar-inner > .scroll-element.scroll-y {
-        right: 7px; }
+        right: 5px; }
       .main-container .dashboard-card.processes .dashboard-card__header {
         margin-bottom: 4px;
         padding-left: 15px; }
@@ -1456,9 +1455,9 @@ body {
             .main-container .dashboard-card.tasks .dashboard-card__header .filters .btn.active, .main-container .dashboard-card.tasks .dashboard-card__header .filters .btn:hover {
               color: #f18a17; }
       .main-container .dashboard-card.tasks .scroll-wrapper {
-        margin-right: -8px; }
+        margin-right: -10px; }
       .main-container .dashboard-card.tasks .scroll-wrapper > .scroll-content {
-        padding-right: 10px; }
+        padding-right: 16px; }
       .main-container .dashboard-card.tasks .task-item {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1601,9 +1600,9 @@ body {
           .main-container .dashboard-card.table .dashboard-card__header .base-btn-select .btn {
             color: #f18a17; }
       .main-container .dashboard-card.table .scroll-wrapper {
-        margin-right: -8px; }
+        margin-right: -10px; }
       .main-container .dashboard-card.table .scroll-wrapper > .scroll-content {
-        padding-right: 10px; }
+        padding-right: 16px; }
 
 .messages-page .page-filters .select {
   margin-right: 70px; }
@@ -1697,17 +1696,11 @@ body {
     .ats-edit__tab .base-tab__body form .col,
     .ats-view__tab .base-tab__body form .col {
       width: 50%; }
-    .ats-edit__tab .base-tab__body form.form-to-show .select-block label,
-    .ats-edit__tab .base-tab__body form.form-to-show .input-block label,
-    .ats-view__tab .base-tab__body form.form-to-show .select-block label,
-    .ats-view__tab .base-tab__body form.form-to-show .input-block label {
-      font-family: font, helvetica, arial sans-serif;
-      opacity: .55; }
     .ats-edit__tab .base-tab__body form .select-block .value,
     .ats-edit__tab .base-tab__body form .input-block .value,
     .ats-view__tab .base-tab__body form .select-block .value,
     .ats-view__tab .base-tab__body form .input-block .value {
-      font-size: 18px;
+      font-size: 16px;
       margin-top: 5px;
       min-height: 18px;
       font-family: font, helvetica, arial sans-serif; }
@@ -1944,7 +1937,7 @@ body {
 
 .scrollbar-inner > .scroll-element.scroll-x {
   bottom: 2px;
-  height: 2px;
+  height: 8px;
   left: 0;
   width: 100%; }
 
@@ -1952,13 +1945,13 @@ body {
   height: 100%;
   right: 0;
   top: 0;
-  width: 2px; }
+  width: 8px; }
 
 .scrollbar-inner > .scroll-element .scroll-element_outer {
   overflow: hidden; }
 
 .scrollbar-inner > .scroll-element .scroll-element_track {
-  width: 2px;
+  width: 8px;
   left: 0; }
 
 .scrollbar-inner > .scroll-element .scroll-element_track {

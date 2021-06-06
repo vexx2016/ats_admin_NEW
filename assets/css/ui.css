@@ -724,7 +724,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .base-table {
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   color: #151515; }
   .base-table thead tr,
   .base-table th {
@@ -762,7 +762,8 @@ h1, h2, h3, h4, h5, h6 {
 .input-block {
   max-width: 340px;
   width: 100%;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-size: 16px; }
   .input-block.textarea {
     max-width: 100%; }
     .input-block.textarea.disabled {
@@ -793,9 +794,9 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #f51d39; }
   .input-block label {
     display: block;
-    font-size: 13px;
+    font-size: 16px;
     font-family: font-b, helvetica, arial sans-serif;
-    margin-bottom: 4px; }
+    margin-bottom: 8px; }
   .input-block textarea {
     width: 100%;
     border-radius: 3px;
@@ -833,9 +834,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: initial; }
   .select-block label {
     display: block;
-    font-size: 13px;
+    font-size: 15px;
     font-family: font-b, helvetica, arial sans-serif;
-    margin-bottom: 4px; }
+    margin-bottom: 8px; }
   .select-block .select {
     width: 100%; }
     .select-block .select.select-filter dt {
@@ -865,7 +866,7 @@ h1, h2, h3, h4, h5, h6 {
   .base-tab__header .btn {
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    font-size: 14px;
+    font-size: 15px;
     color: #3b3c3e;
     margin: 0 35px 0 0;
     font-family: font, helvetica, arial sans-serif;
@@ -907,7 +908,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .base-tab__body .input-block .infobox {
   color: #6f6f6f;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 8px; }
 
 .base-tab__body .input-block.file-input {
