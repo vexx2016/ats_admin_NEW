@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>АТС 31231212412_9798243 — 1ATS</title>
+	<title>Список АТС — 1ATS</title>
 	<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
@@ -333,13 +333,17 @@
 			<div class="main-container">
 				<section class="main-container__body">
 					<div class="title">
-						Записанные разговоры
+						<span class="over-title">Настройка</span>
+						Коды регионов
 					</div>
 					<div class="table-container --desktop">
 						<div class="table-header">
 							<button class="btn base-btn line page-filters__btn">
 								<svg><use xlink:href="#filter"></use></svg>
 								<span>Фильтры</span>
+							</button>
+							<button class="btn base-btn popup-btn__open" style="margin-left:0px;margin-right: auto;">
+								Создать
 							</button>
 							<div class="base-pagination">
 								<div class="page-count">
@@ -368,9 +372,6 @@
 									<button class="btn num active">1</button>
 									<button class="btn num">2</button>
 									<button class="btn num">3</button>
-									<button class="btn num">4</button>
-									<button class="btn num">...</button>
-									<button class="btn num">78</button>
 									<button class="btn next">
 										След.
 									</button>
@@ -379,19 +380,16 @@
 							<div class="page-filters">
 								<div class="inputs-row">
 									<div class="input-block ">
-										<input type="text" id="input_1" name="input_1" placeholder="АТС ID">
+										<input type="text" id="input_id" name="input_id" placeholder="ID">
 									</div>
 									<div class="input-block ">
-										<input type="text" id="input_13" name="input_13" placeholder="Дата начала">
+										<input type="text" id="input_2" name="input_2" placeholder="Код страны">
 									</div>
 									<div class="input-block ">
-										<input type="text" id="input_14" name="input_14" placeholder="Дата окончания">
+										<input type="text" id="input_3" name="input_3" placeholder="Код региона">
 									</div>
 									<div class="input-block ">
-										<input type="text" id="input_15" name="input_15" placeholder="Номер звонящего">
-									</div>
-									<div class="input-block ">
-										<input type="text" id="input_16" name="input_16" placeholder="Номер вызываемого">
+										<input type="text" id="input_4" name="input_4" placeholder="Описание">
 									</div>
 								</div>
 								<div class="btns-row">
@@ -400,7 +398,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="table-body scrollbar-inner" style="padding-bottom: 30px;">
+						<div class="table-body scrollbar-inner">
 							<table class="base-table">
 								<thead>
 									<tr>
@@ -416,7 +414,18 @@
 											</button>
 										</td>
 										<td>
-											<span>АТС</span>
+											<span>Код страны</span>
+											<button class="btn table-sorting__btn up">
+												<svg x="0px" y="0px" viewBox="0 0 384 384">
+												<g>
+													<polygon class="up" points="128,0 42.7,85.1 106.7,85.1 106.7,234.7 149.3,234.7 149.3,85.1 213.3,85.1 		"/>
+													<polygon class="down" points="277.3,298.9 277.3,149.3 234.7,149.3 234.7,298.9 170.7,298.9 256,384 341.3,298.9 		"/>
+												</g>
+												</svg>
+											</button>
+										</td>
+										<td>
+											<span>Код региона</span>
 											<button class="btn table-sorting__btn">
 												<svg x="0px" y="0px" viewBox="0 0 384 384">
 												<g>
@@ -427,8 +436,8 @@
 											</button>
 										</td>
 										<td>
-											<span>Название</span>
-											<button class="btn table-sorting__btn">
+											<span>Описание</span>
+											<button class="btn table-sorting__btn down">
 												<svg x="0px" y="0px" viewBox="0 0 384 384">
 												<g>
 													<polygon class="up" points="128,0 42.7,85.1 106.7,85.1 106.7,234.7 149.3,234.7 149.3,85.1 213.3,85.1 		"/>
@@ -437,17 +446,26 @@
 												</svg>
 											</button>
 										</td>
-										<td>
-											<span>Файл</span>
-										</td>
+										<td></td>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td>13</td>
-										<td>14679</td>
-										<td>Record: 22.02.2021 10:11:43</td>
-										<td>2021-02-22-499124414112-753424131-10-11-43.mp3</td>
+										<td>1</td>
+										<td>7</td>
+										<td>495</td>
+										<td>Москва</td>
+										<td>
+											<button class="btn table-action-btn show popup-btn__open" data-popup="show-popup"><svg>
+												<use xlink:href="#eye"></use>
+											</svg></button>
+											<button class="btn table-action-btn edit popup-btn__open" data-popup="edit-popup"><svg>
+												<use xlink:href="#edit"></use>
+											</svg></button>
+											<button class="btn table-action-btn delete popup-btn__open" data-popup="delete-popup"><svg>
+												<use xlink:href="#remove"></use>
+											</svg></button>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -458,6 +476,9 @@
 							<button class="btn base-btn line page-filters__btn">
 								<svg><use xlink:href="#filter"></use></svg>
 								<span>Фильтры</span>
+							</button>
+							<button class="btn base-btn popup-btn__open" style="margin-left:0px;margin-right: auto;">
+								Создать
 							</button>
 							<div class="base-pagination">
 								<div class="page-count">
@@ -486,9 +507,6 @@
 									<button class="btn num active">1</button>
 									<button class="btn num">2</button>
 									<button class="btn num">3</button>
-									<button class="btn num">4</button>
-									<button class="btn num">...</button>
-									<button class="btn num">78</button>
 									<button class="btn next">
 										След.
 									</button>
@@ -497,19 +515,16 @@
 							<div class="page-filters">
 								<div class="inputs-row">
 									<div class="input-block ">
-										<input type="text" id="input_1" name="input_1" placeholder="АТС ID">
+										<input type="text" id="input_id" name="input_id" placeholder="ID">
 									</div>
 									<div class="input-block ">
-										<input type="text" id="input_13" name="input_13" placeholder="Дата начала">
+										<input type="text" id="input_2" name="input_2" placeholder="Код страны">
 									</div>
 									<div class="input-block ">
-										<input type="text" id="input_14" name="input_14" placeholder="Дата окончания">
+										<input type="text" id="input_3" name="input_3" placeholder="Код региона">
 									</div>
 									<div class="input-block ">
-										<input type="text" id="input_15" name="input_15" placeholder="Номер звонящего">
-									</div>
-									<div class="input-block ">
-										<input type="text" id="input_16" name="input_16" placeholder="Номер вызываемого">
+										<input type="text" id="input_4" name="input_4" placeholder="Описание">
 									</div>
 								</div>
 								<div class="btns-row">
@@ -538,21 +553,42 @@
 												</div>
 												<div class="td-block">
 													<div class="label">ID</div>
-													<div class="data">13</div>
+													<div class="data">1</div>
 												</div>
 												<div class="td-block">
-													<div class="label">АТС</div>
-													<div class="data">14679</div>
+													<div class="label">Код страны</div>
+													<div class="data">
+														7
+													</div>
+												</div>
+												<div class="td-block">
+													<div class="label">Код региона</div>
+													<div class="data">
+														495
+													</div>
 												</div>
 											</div>
 											<div class="collapse-block">
 												<div class="td-block">
-													<div class="label">Название</div>
-													<div class="data">Record: 22.02.2021 10:11:43</div>
+													<div class="label">Описание</div>
+													<div class="data">
+														Москва
+													</div>
 												</div>
 												<div class="td-block">
-													<div class="label">Файл</div>
-													<div class="data">2021-02-22-499124414112-753424131-10-11-43.mp3</div>
+													<div class="data">
+														<div class="action">
+															<button class="btn table-action-btn show popup-btn__open" data-popup="show-popup"><svg>
+																<use xlink:href="#eye"></use>
+															</svg></button>
+															<button class="btn table-action-btn edit popup-btn__open" data-popup="edit-popup"><svg>
+																<use xlink:href="#edit"></use>
+															</svg></button>
+															<button class="btn table-action-btn delete popup-btn__open" data-popup="delete-popup"><svg>
+																<use xlink:href="#remove"></use>
+															</svg></button>
+														</div>
+													</div>
 												</div>
 											</div>
 										</td>
@@ -564,81 +600,99 @@
 					<!--  -->
 				</section>
 				<!--  -->
+				<div class="base-popup">
+					<div class="base-popup__container">
+						<div class="base-popup__title">Создать</div>
+						<form action="">
+							<div class="col">
+								<div class="input-block required">
+									<label for="input_1">Код страны</label>
+									<input type="text" id="input_1" name="input_1">
+								</div>
+								<div class="input-block">
+									<label for="input_3">Описание</label>
+									<input type="text" id="input_3" name="input_3">
+								</div>
+							</div>
+							<div class="col">
+								<div class="input-block required">
+									<label for="input_2">Код региона</label>
+									<input type="text" id="input_2" name="input_2">
+								</div>
+							</div>
+						</form>
+						<div class="base-popup__footer">
+							<button class="btn base-btn grey popup-btn__close">Отмена</button>
+							<button class="btn base-btn">Создать</button>
+						</div>
+					</div>
+				</div>
+				<!--  -->
+				<!--  -->
+				<div class="base-popup" data-popup="edit-popup">
+					<div class="base-popup__container">
+						<div class="base-popup__title">Редактирование</div>
+						<form action="">
+							<div class="col">
+								<div class="input-block required">
+									<label for="input_1">Код страны</label>
+									<input type="text" id="input_1" name="input_1" value="7">
+								</div>
+								<div class="input-block">
+									<label for="input_3">Описание</label>
+									<input type="text" id="input_3" name="input_3" value="495">
+								</div>
+							</div>
+							<div class="col">
+								<div class="input-block required">
+									<label for="input_2">Код региона</label>
+									<input type="text" id="input_2" name="input_2" value="Москва">
+								</div>
+							</div>
+						</form>
+						<div class="base-popup__footer">
+							<button class="btn base-btn grey popup-btn__close" data-popup="edit-popup">Отмена</button>
+							<button class="btn base-btn">Создать</button>
+						</div>
+					</div>
+				</div>
+				<!--  -->
+				<!--  -->
 				<div class="base-popup" data-popup="show-popup">
 					<div class="base-popup__container">
-						<div class="base-popup__title">Удалить</div>
-						<p>Вы действительно хотите удалить номер 4951090390493?</p>
+						<div class="base-popup__title">Просмотр</div>
+						<form class="form-to-show">
+							<div class="col">
+								<div class="input-block">
+									<label for="input_1">Код страны</label>
+									<div class="value">7</div>
+								</div>
+								<div class="input-block">
+									<label for="input_1">Описание</label>
+									<div class="value">Москва</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="input-block">
+									<label for="input_1">Код региона</label>
+									<div class="value">495</div>
+								</div>
+							</div>
+						</form>
 						<div class="base-popup__footer">
 							<button class="btn base-btn grey popup-btn__close" data-popup="show-popup">Отмена</button>
 						</div>
 					</div>
 				</div>
 				<!--  -->
-				<div class="mini-player">
-					<button class="btn pause-btn">
-						<svg height="327pt" viewBox="-45 0 327 327" width="327pt" xmlns="http://www.w3.org/2000/svg"><path d="m158 0h71c4.417969 0 8 3.582031 8 8v311c0 4.417969-3.582031 8-8 8h-71c-4.417969 0-8-3.582031-8-8v-311c0-4.417969 3.582031-8 8-8zm0 0"/><path d="m8 0h71c4.417969 0 8 3.582031 8 8v311c0 4.417969-3.582031 8-8 8h-71c-4.417969 0-8-3.582031-8-8v-311c0-4.417969 3.582031-8 8-8zm0 0"/></svg>
-					</button>
-					<div class="track">
-						<div class="start">0:35</div>
-						<div class="end">1:34</div>
-						<div class="line">
-							<div class="duration" style="width: 23%"></div>
-						</div>
-					</div>
-					<div class="volume">
-						<div class="ico">
-							<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
-<path d="M278.944,17.577c-5.568-2.656-12.128-1.952-16.928,1.92L106.368,144.009H32c-17.632,0-32,14.368-32,32v128
-	c0,17.664,14.368,32,32,32h74.368l155.616,124.512c2.912,2.304,6.464,3.488,10.016,3.488c2.368,0,4.736-0.544,6.944-1.6
-	c5.536-2.656,9.056-8.256,9.056-14.4v-416C288,25.865,284.48,20.265,278.944,17.577z"/>
-<path d="M368.992,126.857c-6.304-6.208-16.416-6.112-22.624,0.128c-6.208,6.304-6.144,16.416,0.128,22.656
-	C370.688,173.513,384,205.609,384,240.009s-13.312,66.496-37.504,90.368c-6.272,6.176-6.336,16.32-0.128,22.624
-	c3.136,3.168,7.264,4.736,11.36,4.736c4.064,0,8.128-1.536,11.264-4.64C399.328,323.241,416,283.049,416,240.009
-	S399.328,156.777,368.992,126.857z"/>
-<path d="M414.144,81.769c-6.304-6.24-16.416-6.176-22.656,0.096c-6.208,6.272-6.144,16.416,0.096,22.624
-	C427.968,140.553,448,188.681,448,240.009s-20.032,99.424-56.416,135.488c-6.24,6.24-6.304,16.384-0.096,22.656
-	c3.168,3.136,7.264,4.704,11.36,4.704c4.064,0,8.16-1.536,11.296-4.64C456.64,356.137,480,299.945,480,240.009
-	S456.64,123.881,414.144,81.769z"/>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-</svg>
-
-						</div>
-						<div class="level">
-							<div class="bg">
-								<div class="value" style="height: 45%"></div>
-							</div>
+				<!--  -->
+				<div class="base-popup" data-popup="delete-popup">
+					<div class="base-popup__container">
+						<div class="base-popup__title">Удалить</div>
+						<p>Вы действительно хотите удалить код региона (7) 495 с ID 1?</p>
+						<div class="base-popup__footer">
+							<button class="btn base-btn grey popup-btn__close" data-popup="delete-popup">Отмена</button>
+							<button class="btn base-btn red">Удалить</button>
 						</div>
 					</div>
 				</div>

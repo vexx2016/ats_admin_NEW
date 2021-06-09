@@ -652,7 +652,9 @@ body {
         -ms-transform: translateY(10%);
             transform: translateY(10%);
     margin-top: 10vh;
-    pointer-events: none; }
+    pointer-events: none;
+    font-size: 16px;
+    line-height: 22px; }
     .base-popup__container form {
       display: -webkit-box;
       display: -ms-flexbox;
