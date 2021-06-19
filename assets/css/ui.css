@@ -1177,7 +1177,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 50px; }
     .base-pagination .page-count span {
       color: #191a1d;
-      font-size: 12px;
+      font-size: 15px;
       margin-right: 10px;
       display: inline-block;
       vertical-align: middle; }
@@ -1190,11 +1190,9 @@ h1, h2, h3, h4, h5, h6 {
         .base-pagination .page-count .select.select-filter dt:before {
           right: 10px; }
       .base-pagination .page-count .select dt input {
-        font-size: 13px; }
-      .base-pagination .page-count .select dd .select-options {
-        padding-right: 2px !important; }
+        font-size: 14px; }
       .base-pagination .page-count .select.select-filter dd .select-options a {
-        font-size: 13px;
+        font-size: 14px;
         padding-left: 8px; }
         .base-pagination .page-count .select.select-filter dd .select-options a:before {
           display: none; }
@@ -1342,8 +1340,7 @@ h1, h2, h3, h4, h5, h6 {
     .select.select-active dt {
       border-color: #ffd802 !important; }
   .select.scrollable.scrollable dd .select-options {
-    padding-top: 15px;
-    padding-bottom: 15px; }
+    padding: 0; }
     .select.scrollable.scrollable dd .select-options .select-block:first-child h5 {
       margin-top: 5px; }
   .select.scrollable.scrollable .scroll-cont {
@@ -1456,5 +1453,9 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 0; }
     .select.select-flag dd .select-options a {
       position: relative;
-      padding: 2px 0 2px 15px;
-      margin-bottom: 12px; }
+      width: 100%;
+      display: block;
+      padding: 8px 0 8px 15px; }
+      .select.select-flag dd .select-options a:hover {
+        background: #f6f6f6;
+        color: #ff8f00; }
